@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2c3e50; /* Fondo único */
-    color: #ecf0f1; /* Texto claro para contraste */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     line-height: 1.6;
 }
 
@@ -16,59 +16,10 @@ body {
     box-sizing: border-box;
 }
 
-/* Encabezado */
-.header {
-    background: #34495e; /* Slightly lighter para distinguir */
-    color: #fff;
-    padding: 20px 40px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    letter-spacing: 1px;
-    font-weight: 700;
-}
-
-.navbar {
-    margin-top: 10px;
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    display: inline-block;
-    margin: 0 25px;
-}
-
-.navbar ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 8px 15px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-}
-
-.navbar ul li a:hover {
-    background: #1abc9c;
-    color: #fff;
-}
-
 /* Sidebar */
 .sidebar {
     width: 50%;
-    background-color: #2c3e50; /* Igual al fondo general */
+    background-color: #2c3e50;
     color: #fff;
     padding: 40px;
     box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
@@ -86,14 +37,14 @@ body {
 
 .sidebar h1 {
     margin: 0 0 10px;
-    font-size: 2.5em;
+    font-size: 2.5rem; /* Cambiado a rem para escalabilidad */
     letter-spacing: 2px;
     border-bottom: 3px solid #1abc9c;
     padding-bottom: 10px;
 }
 
 .sidebar p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin: 10px 0 30px;
     color: #bdc3c7;
 }
@@ -111,7 +62,7 @@ body {
 .menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: 500;
     transition: all 0.3s ease;
 }
@@ -126,8 +77,8 @@ body {
     margin-left: 50%;
     width: 50%;
     padding: 40px;
-    background-color: #2c3e50; /* Igual al fondo general */
-    color: #ecf0f1; /* Texto claro */
+    background-color: #2c3e50;
+    color: #ecf0f1;
     box-sizing: border-box;
     min-height: 100vh;
     overflow-y: auto;
@@ -141,22 +92,12 @@ body:has(.sidebar) .container {
     overflow: hidden;
 }
 
-/* Ajuste para páginas sin sidebar */
-body:not(:has(.sidebar)) .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: block;
-    height: auto;
-    overflow: visible;
-}
-
 /* Secciones */
 .section {
     padding: 30px;
     margin: 20px 0;
     border-radius: 12px;
-    background: #34495e; /* Ligeramente más claro para diferenciar */
+    background: #34495e;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     color: #ecf0f1;
 }
@@ -165,19 +106,19 @@ body:not(:has(.sidebar)) .container {
     color: #fff;
     border-bottom: 2px solid #1abc9c;
     padding-bottom: 10px;
-    font-size: 2em;
+    font-size: 2rem;
     margin-top: 0;
 }
 
 .section h3 {
     color: #bdc3c7;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     margin: 10px 0;
 }
 
 .section p {
     margin: 10px 0;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .section ul {
@@ -187,76 +128,7 @@ body:not(:has(.sidebar)) .container {
 
 .section ul li {
     margin: 8px 0;
-    font-size: 1.1em;
-}
-
-/* Imágenes */
-.section img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 15px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
-}
-
-/* Tabla de proyectos */
-.projects-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #34495e; /* Consistente con secciones */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.projects-table th,
-.projects-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #2c3e50;
-    color: #ecf0f1;
-}
-
-.projects-table th {
-    background-color: #2c3e50;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.1em;
-}
-
-.projects-table td {
-    font-size: 1em;
-}
-
-.projects-table tbody tr:hover {
-    background-color: #3d5a74; /* Más claro para hover */
-}
-
-.projects-table a {
-    color: #1abc9c;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.projects-table a:hover {
-    color: #16a085;
-    text-decoration: underline;
-}
-
-/* Tecnologías en la tabla */
-.projects-table .tech {
-    color: #1abc9c;
-    background: rgba(26, 188, 156, 0.2); /* Ajustado para fondo oscuro */
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    margin: 5px 5px 0 0;
-    display: inline-block;
+    font-size: 1.1rem;
 }
 
 /* Proyectos individuales */
@@ -287,7 +159,7 @@ body:not(:has(.sidebar)) .container {
     background: rgba(26, 188, 156, 0.2);
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     margin: 5px 5px 0 0;
     display: inline-block;
 }
@@ -304,7 +176,7 @@ body:not(:has(.sidebar)) .container {
 
 .footer p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 /* Estilos responsivos */
@@ -317,7 +189,7 @@ body:not(:has(.sidebar)) .container {
         width: 100%;
         position: static;
         height: auto;
-        padding: 20px;
+        padding: 90px;
     }
 
     .content {
@@ -326,48 +198,73 @@ body:not(:has(.sidebar)) .container {
         padding: 20px;
     }
 
-    .header {
-        padding: 15px 20px;
+    /* Aumentar tamaños de fuente y espaciado para legibilidad en móvil */
+    .sidebar h1 {
+        font-size: 2rem;
     }
 
-    .header h1 {
-        font-size: 1.8em;
+    .sidebar p {
+        font-size: 1rem;
     }
-
-    .navbar ul li {
-        margin: 0 10px;
+    .menu {
+        display: none;
     }
-
-    .navbar ul li a {
-        font-size: 1em;
-        padding: 6px 10px;
-    }
-
-    .section {
+    .menu ul li {
         margin: 15px 0;
     }
 
-    .section img {
-        max-width: 100%;
+    .menu ul li a {
+        font-size: 1.2rem;
     }
 
-    .projects-table th,
-    .projects-table td {
-        padding: 10px;
-        font-size: 0.9em;
+    .section {
+        padding: 20px;
+        margin: 10px 0;
     }
-    /* Estilo del rastro verdoso */
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section h3 {
+        font-size: 1.3rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .section ul li {
+        font-size: 1rem;
+    }
+
+    .project {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .tech {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo del rastro verdoso */
 .trail {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #1abc9c; /* Color verdoso */
-    border-radius: 50%; /* Forma circular */
-    pointer-events: none; /* No interfiere con clics */
+    background-color: #1abc9c;
+    border-radius: 50%;
+    pointer-events: none;
     opacity: 0.7;
-    transform: translate(-50%, -50%); /* Centrado en el cursor */
-    animation: fadeOut 0.8s ease forwards; /* Desvanecimiento */
-    z-index: 9999; /* Encima de otros elementos */
+    transform: translate(-50%, -50%);
+    animation: fadeOut 0.8s ease forwards;
+    z-index: 9999;
 }
 
 @keyframes fadeOut {
@@ -377,7 +274,6 @@ body:not(:has(.sidebar)) .container {
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.5); /* Se encoge */
+        transform: translate(-50%, -50%) scale(0.5);
     }
-}
 }
